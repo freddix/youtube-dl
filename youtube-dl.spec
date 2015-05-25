@@ -1,11 +1,11 @@
 Summary:	Video extraction utility for YouTube
 Name:		youtube-dl
-Version:	2014.02.10
-Release:	2
+Version:	2015.03.28
+Release:	1
 License:	MIT, Public Domain
 Group:		Applications/System
 Source0:	http://youtube-dl.org/downloads/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	ad605f3021787068177dd4e392ff04b0
+# Source0-md5:	162b0e9ffb9eafa24e3b0b23cb2c58e2
 URL:		http://rg3.github.com/youtube-dl/
 BuildRequires:	python3
 BuildRequires:	rpm-pythonprov
@@ -39,9 +39,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG LICENSE README.txt
+%doc LICENSE README.txt
 %attr(755,root,root) %{_bindir}/youtube-dl
 %{py3_sitescriptdir}/youtube_dl
-%{py3_sitescriptdir}/youtube_dl-%{version}-py*.egg-info
+%{py3_sitescriptdir}/*.egg-info
 %{_mandir}/man1/youtube-dl.1*
 
